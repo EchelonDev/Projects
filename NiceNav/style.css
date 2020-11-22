@@ -37,6 +37,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+/*---------*/
+/* TOP-BAR */
+/*---------*/
 
 nav {
 	position: fixed;
@@ -136,7 +139,9 @@ nav ul li a {
 	font-weight: 600;
 }
 
-/* Page-Content */
+/*---------*/
+/* TOP-BAR */
+/*---------*/
 
 .menubar {
 	display: flex;
@@ -159,6 +164,10 @@ nav ul li a {
 	font-weight: 300;
 }
 
+/* ------ */
+/* BANNER */
+/* ------ */
+
 .banner {
 	height: 350px;
 	background-image: url(./img/banner.jpg);
@@ -180,19 +189,24 @@ nav ul li a {
 	padding: 5px 0px 0px 50px;
 }
 
+/* ------------ */
+/* MAIN-CONTENT */
+/* ------------ */
+
 .container {
 	width: 1024px;
 	margin: auto;
 	display: flex;
-	flex-direction: column;
 	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.block {
+.container .block {
+	margin-top: 50px;
+	flex-basis: 30%;
 	text-align: center;
-	min-width: 320px;
 	padding: 2rem;
-	margin: 3rem 1rem 3rem 1rem;
 	background-color: var(--lightblue);
 	color: white;
 	line-height: 1.8rem;
@@ -225,4 +239,66 @@ nav ul li a {
 
 .block button:hover {
 	background-color: var(--skyblue);
+}
+
+/* ------------ */
+/* CONTACT-FORM */
+/* ------------ */
+
+.contact .container {
+	text-align: center;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+form {
+	width: 100%;
+	margin: 50px auto 50px auto;
+	background-color: var(--blue);
+	padding: 40px;
+	border: 5px solid var(--babyblue);
+}
+
+form h1 {
+	text-align: center;
+}
+
+form p {
+	text-align: center;
+}
+
+form input[type="text"] {
+	width: 100%;
+	background-color: var(--blue);
+	border: none;
+	border-bottom: 1px solid var(--skyblue);
+	padding: 10px;
+	margin: 15px 0px 15px 0px;
+	font-size: 1rem;
+	color: white;
+}
+
+form input::placeholder {
+	color: var(--skyblue);
+}
+
+form input[type="submit"] {
+	margin: 20px 0px 0px 0px;
+	padding: 15px 25px 15px 25px;
+	background-color: var(--babyblue);
+	border: none;
+	border-bottom: 2px solid var(--indigo);
+	border-radius: 3px;
+	color: white;
+	font-size: 1rem;
+	font-weight: 700;
+	transition: all 300ms ease-in-out;
+}
+
+form input[type="submit"]:hover {
+	background-color: var(--skyblue);
+	border-bottom: 2px solid var(--lightblue);
 }
