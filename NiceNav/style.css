@@ -194,7 +194,7 @@ nav ul li a {
 /* ------------ */
 
 .container {
-	width: 1024px;
+	max-width: 1024px;
 	margin: auto;
 	display: flex;
 	flex-direction: row;
@@ -203,8 +203,10 @@ nav ul li a {
 }
 
 .container .block {
-	margin-top: 50px;
 	flex-basis: 30%;
+	flex-grow: 9999;
+	min-width: 280px;
+	margin: 25px 10px 25px 10px;
 	text-align: center;
 	padding: 2rem;
 	background-color: var(--lightblue);
